@@ -31,7 +31,15 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  return null;
+	  java.util.Random rnd = new Random();
+	  String out = "";
+	  while (!input.isEmpty()) {
+	  	int i = rnd.nextInt(input.length());
+	  	out = out + input.charAt(i);
+	  	if (i != input.length() - 1) input = input.substring(0, i) + input.substring(i + 1);
+	  	else input = input.substring(0, i);
+	  }
+	  return out;
 	}
 	/**
 	 * Return a string rep of this object
