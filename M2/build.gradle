@@ -19,3 +19,7 @@ jar {
 dependencies {
 	compile files('lib/resources.jar')
 }
+
+clean {
+	delete 'm2.jar'
+}
